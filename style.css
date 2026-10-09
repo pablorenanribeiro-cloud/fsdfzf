@@ -1,0 +1,147 @@
+/* Reseta margens e define o box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Foco acessível (Acessibilidade) - visível ao navegar com teclado */
+*:focus-visible {
+    outline: 3px solid #005fcc;
+    outline-offset: 2px;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.cabecalho h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Legenda com Cores e Texto (Acessibilidade - Não depender só de cor) */
+.legenda {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #111;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.badge.verde { background-color: #d4edda; border: 1px solid #c3e6cb; }
+.badge.amarelo { background-color: #fff3cd; border: 1px solid #ffeeba; }
+.badge.vermelho { background-color: #f8d7da; border: 1px solid #f5c6cb; }
+
+/* Estrutura principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.categoria {
+    margin-bottom: 3rem;
+}
+
+.titulo-sessao {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+.verde-texto { color: #155724; border-color: #155724;}
+.amarelo-texto { color: #856404; border-color: #856404;}
+.vermelho-texto { color: #721c24; border-color: #721c24;}
+
+/* Sistema de Grid Responsivo para os Cards */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Estilo Base dos Cards */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 6px solid #ccc;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #222;
+}
+
+/* Cores específicas dos cards para acessibilidade de contraste */
+.card-verde {
+    border-left-color: #28a745;
+    background-color: #f2fbf4;
+}
+
+.card-amarelo {
+    border-left-color: #ffc107;
+    background-color: #fffdf5;
+}
+
+.card-vermelho {
+    border-left-color: #dc3545;
+    background-color: #fdf5f6;
+}
+
+/* Rodapé */
+.rodape {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #2c3e50;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* Responsividade celular */
+@media (max-width: 600px) {
+    .cabecalho h1 {
+        font-size: 1.8rem;
+    }
+    .grid-cards {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
+    }
+}
