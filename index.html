@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáforo da Comunicação</title>
+    <!-- Vincula o arquivo CSS separado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Semáforo da Comunicação Web</h1>
+        <p>Guia de boas e más práticas de comunicação em interfaces web.</p>
+        
+        <!-- Legenda acessível para não depender apenas das cores -->
+        <div class="legenda" aria-label="Legenda das categorias">
+            <span class="badge verde"><span aria-hidden="true">🟢</span> Boas práticas</span>
+            <span class="badge amarelo"><span aria-hidden="true">🟡</span> Cuidado</span>
+            <span class="badge vermelho"><span aria-hidden="true">🔴</span> Evitar</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- CATEGORIA: VERDE (Boas Práticas) -->
+        <section class="categoria" aria-labelledby="titulo-verde">
+            <h2 id="titulo-verde" class="titulo-sessao verde-texto"><span aria-hidden="true">🟢</span> VERDE: Boas práticas</h2>
+            <div class="grid-cards">
+                <article class="card card-verde" tabindex="0">
+                    <div class="card-header"><span aria-hidden="true">🟢</span><h3>Linguagem Clara</h3></div>
+                    <p>Use frases curtas, diretas e vocabulário simples para que todos compreendam a mensagem rapidamente.</p>
+                </article>
+                <article class="card card-verde" tabindex="0">
+                    <div class="card-header"><span aria-hidden="true">🟢</span><h3>Feedback Visual</h3></div>
+                    <p>Sempre avise o usuário sobre o resultado de uma ação (ex: "Formulário enviado com sucesso").</p>
+                </article>
+                <article class="card card-verde" tabindex="0">
+                    <div class="card-header"><span aria-hidden="true">🟢</span><h3>Hierarquia de Informação</h3></div>
+                    <p>Utilize tamanhos diferentes de texto (h1, h2, h3) para guiar a leitura de forma intuitiva.</p>
+                </article>
+                <article class="card card-verde" tabindex="0">
+                    <div class="card-header"><span aria-hidden="true">🟢</span><h3>Textos Alternativos</h3></div>
+                    <p>Sempre descreva o conteúdo de imagens usando o atributo <code>alt</code> para leitores de tela.</p>
+                </article>
+                <article class="card card-verde" tabindex="0">
+                    <div class="card-header"><span aria-hidden="true">🟢</span><h3>Contraste Adequado</h3></div>
+                    <p>Garanta que o texto tenha alto contraste com o fundo para usuários com baixa visão.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- CATEGORIA: AMARELO (Cuidado) -->
+        <section class="categoria" aria-labelledby="titulo-amarelo">
+            <h2 id="titulo-amarelo" class="titulo-sessao amarelo-texto"><span aria-hidden="true">🟡</span> AMARELO: Cuidado</h2>
+            <div class="grid-cards">
+                <article class="card card-amarelo" tabindex="0">
+                    <div class="card-header"><span aria-hidden="true">🟡</span><h3>Uso de Jargões</h3></div>
+                    <p>Evite termos técnicos ou jargões da área, a menos que tenha certeza de que o público os entende.</p>
+                </article>
+                <article class="card card-amarelo" tabindex="0">
+                    <div class="card-header"><span aria-hidden="true">🟡</span><h3>Ícones sem Rótulos</h3></div>
+                    <p>Símbolos podem ser ambíguos. Sempre que possível, acompanhe ícones com rótulos de texto.</p>
+                </article>
+                <article class="card card-amarelo" tabindex="0">
+                    <div class="card-header"><span aria-hidden="true">🟡</span><h3>Animações em Excesso</h3></div>
+                    <p>Podem distrair ou até causar tontura em pessoas com sensibilidade visual. Use com moderação.</p>
+                </article>
+                <article class="card card-amarelo" tabindex="0">
+                    <div class="card-header"><span aria-hidden="true">🟡</span><h3>Formulários Longos</h3></div>
+                    <p>Podem cansar o usuário. Se houver muitos campos, divida em passos menores e claros.</p>
+                </article>
+                <article class="card card-amarelo" tabindex="0">
+                    <div class="card-header"><span aria-hidden="true">🟡</span><h3>Notificações/Pop-ups</h3></div>
+                    <p>Podem frustrar o usuário se interromperem uma tarefa. Ofereça um botão claro para fechar (X).</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- CATEGORIA: VERMELHO (Evitar) -->
+        <section class="categoria" aria-labelledby="titulo-vermelho">
+            <h2 id="titulo-vermelho" class="titulo-sessao vermelho-texto"><span aria-hidden="true">🔴</span> VERMELHO: Evitar</h2>
+            <div class="grid-cards">
+                <article class="card card-vermelho" tabindex="0">
+                    <div class="card-header"><span aria-hidden="true">🔴</span><h3>Depender Só da Cor</h3></div>
+                    <p>Nunca use apenas a cor (ex: texto vermelho) para indicar erros. Use também texto ou símbolos.</p>
+                </article>
+                <article class="card card-vermelho" tabindex="0">
+                    <div class="card-header"><span aria-hidden="true">🔴</span><h3>Textos Minúsculos</h3></div>
+                    <p>Fontes muito pequenas dificultam a leitura no celular. O tamanho mínimo recomendado é 16px.</p>
+                </article>
+                <article class="card card-vermelho" tabindex="0">
+                    <div class="card-header"><span aria-hidden="true">🔴</span><h3>Links Genéricos</h3></div>
+                    <p>Evite usar "clique aqui". Pessoas que usam leitores de tela precisam saber para onde o link vai (ex: "leia o relatório").</p>
+                </article>
+                <article class="card card-vermelho" tabindex="0">
+                    <div class="card-header"><span aria-hidden="true">🔴</span><h3>Áudio Automático</h3></div>
+                    <p>Vídeos ou sons tocando sozinhos assustam o usuário e prejudicam quem usa leitores de tela.</p>
+                </article>
+                <article class="card card-vermelho" tabindex="0">
+                    <div class="card-header"><span aria-hidden="true">🔴</span><h3>Bloqueio de Teclado</h3></div>
+                    <p>Nunca crie elementos que não possam ser acessados ou fechados usando a tecla "Tab" e "Esc".</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>Projeto Semáforo da Comunicação - Desenvolvido para as aulas de Interfaces.</p>
+    </footer>
+</body>
+</html>
